@@ -1,0 +1,146 @@
+/* -- GENERAL -- */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(233, 233, 233);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.1;
+  margin-bottom: 0.2em;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  max-width: min(800px, 100% - 40px);
+  margin: 0 auto;
+}
+
+/* -- HEADER -- */
+header {
+  background-color: white;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+header .baseline {
+  font-size: 1.4rem;
+}
+
+/* -- NAV -- */
+nav {
+  background: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 200ms;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* -- CONTENT -- */
+.content {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* -- CONTENT: MAIN -- */
+.content main {
+  flex: 999;
+  flex-basis: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* -- CONTENT: ASIDE -- */
+.content aside {
+  flex: 1;
+  min-width: 250px;
+}
+
+.item,
+.about-me {
+  border-radius: 5px;
+  background-color: white;
+  padding: 15px;
+}
+
+:is(.item, .about-me) img {
+  margin: 10px 0;
+}
+
+.item img {
+  height: 200px;
+  width: 100%;
+}
+
+.about-me img {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+/* -- FOOTER -- */
+footer {
+  height: 100px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  font-weight: bold;
+}
